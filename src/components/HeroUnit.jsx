@@ -1,63 +1,99 @@
-import { Box, Heading, Container, Text, Button, Stack } from '@chakra-ui/react';
-import '@fontsource/lobster';
+import {
+  Heading,
+  Stack,
+  Flex,
+  Text,
+  VStack,
+  useBreakpointValue,
+  Image,
+  IconButton,
+} from '@chakra-ui/react';
 import '@fontsource/montserrat';
+import '@fontsource/bowlby-one';
+import { BsInstagram } from 'react-icons/bs';
+import { MdEmail } from 'react-icons/md';
+import { BsChevronCompactDown } from 'react-icons/bs';
 
 export const HeroUnit = () => {
   return (
-    <>
-      <Container maxW={'3xl'}>
-        <Stack
-          as={Box}
-          textAlign={'center'}
-          spacing={{ base: 4, md: 8 }}
-          py={{ base: 20, md: 36 }}
-        >
-          <Heading
-            fontWeight={400}
-            fontSize={{ base: '4xl', sm: '6xl', md: '8xl' }}
-            fontFamily={`'Lobster', cursive`}
-            lineHeight={'50%'}
-            color={'purple.400'}
+    <Flex
+      w={'full'}
+      h={'75vh'}
+      // backgroundImage={
+      //   'url(https://images.unsplash.com/photo-1606306279930-8b1a0bb73386?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80)'
+      // }
+      // backgroundSize={'cover'}
+      // backgroundPosition={'center center'}
+    >
+      <VStack
+        w={'full'}
+        justify={'center'}
+        px={useBreakpointValue({ base: 4, md: 8 })}
+        //bgGradient={'linear(to-r, blackAlpha.800,#39315d86)'}
+        backgroundColor={'#F8F1E5'}
+      >
+        <Stack maxW={'9xl'} align={'flex-start'} spacing={6} textAlign="center">
+          <Image src={require('../images/VMCWavy.png')} maxH={260} />
+          {/* <Text
+            color={'white'}
+            fontFamily={`'Montserrat', sans-serif`}
+            fontWeight={'bold'}
+            textAlign={'center'}
+            alignSelf={'center'}
+            fontSize={'large'}
           >
-            Velvet Moon <br />
-            <Text
-              as={'span'}
-              color={'gray'}
-              fontWeight={600}
-              fontFamily={`'Montserrat', sans-serif`}
-              fontSize={{ base: '2xl', sm: '2xl', md: '4xl' }}
-            >
-              COFFEE
-            </Text>
-          </Heading>
-          <Text color={'gray'} fontFamily={`'Montserrat', sans-serif`}>
-            Coffee Pop-Ups and Event Catering
-          </Text>
+            Pop-up Coffee Shop & Event Catering
+          </Text> */}
+
           <Stack
             direction={'column'}
             spacing={3}
             align={'center'}
             alignSelf={'center'}
             position={'relative'}
+            gap={8}
           >
-            <Button
-              colorScheme={'purple.400'}
-              bg={'navy'}
+            <Stack direction={'row'}>
+              <IconButton
+                rounded={'full'}
+                aria-label="Instagram"
+                onClick={() => {
+                  window.location.href = `https://www.instagram.com/velvetmooncoffee/`;
+                }}
+                icon={<BsInstagram color="#F8F1E5" size="20px" />}
+                _hover={{
+                  bg: '#d49c7f',
+                }}
+                backgroundColor={'#8c3839'}
+              />
+              <IconButton
+                rounded={'full'}
+                aria-label="Email"
+                onClick={e => {
+                  window.location.href = `mailto:hello@velvetmooncoffee.com`;
+                  e.preventDefault();
+                }}
+                icon={<MdEmail color="#F8F1E5" size="20px" />}
+                _hover={{
+                  bg: '#d49c7f',
+                }}
+                backgroundColor={'#8c3839'}
+              />
+            </Stack>
+            {/* TODO: add hash scroll setup, then make the hero unit 100 again
+            <IconButton
+              colorScheme={'#a35428'}
+              bg={'#d49c7f'}
               rounded={'full'}
               px={6}
               _hover={{
-                bg: 'purple.400',
+                bg: '#8c3839',
               }}
-              onClick={e => {
-                window.location.href = 'mailto:hello@velvetmooncoffee.com';
-                e.preventDefault();
-              }}
-            >
-              Book Us
-            </Button>
+              icon={<BsChevronCompactDown />}
+            /> */}
           </Stack>
         </Stack>
-      </Container>
-    </>
+      </VStack>
+    </Flex>
   );
 };

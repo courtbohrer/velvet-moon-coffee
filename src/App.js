@@ -1,16 +1,24 @@
 import React from 'react';
 import {
   ChakraProvider,
-  theme,
+  extendTheme
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { HeroUnit } from './components/HeroUnit';
+import { AppContent } from './components/AppContent';
+import '@fontsource/montserrat';
+import '@fontsource/bowlby-one';
+import "@fontsource/titan-one"
+
+const theme = extendTheme({
+  fonts: {
+    heading: `"Titan One", cursive`,
+    body: `'Montserrat', sans-serif`,
+  },
+})
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <HeroUnit />
-      <ColorModeSwitcher />
+      <AppContent />
     </ChakraProvider>
   );
 }
