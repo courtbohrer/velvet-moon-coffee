@@ -48,8 +48,8 @@ export const AboutUsSection = () => {
             We have a full mobile espresso bar that can accomodate any event. We
             are here to caffienate your wedding guests and get them back on the
             dance floor. Keep the juices flowing during an upstate corporate
-            retreat. Really anywhere you have a need for specialy coffee, we
-            would love to be there for you!
+            retreat. Really anywhere you have a need for craft coffee, we would
+            love to be there for you!
             {/* <br /> We believe in coffee as a center for community and
             conversation. We are honored to be invited into your special moments
             and we take hospitality as seriously as our coffee. We will treat
