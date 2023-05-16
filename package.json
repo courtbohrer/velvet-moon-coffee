@@ -2,6 +2,7 @@
   "name": "coffee-biz-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://velvetmooncoffee.com",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.5.5",
@@ -17,7 +18,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "firebase": "^9.21.0",
-    "framer-motion": "^6.5.1",
+    "framer-motion": "^10.12.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
