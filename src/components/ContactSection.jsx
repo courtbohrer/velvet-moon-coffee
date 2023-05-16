@@ -129,9 +129,9 @@ export const ContactSection = () => {
                         _hover={{ border: '2px solid #CEDEEB' }}
                         leftIcon={<MdPhone color="#CEDEEB" size="20px" />}
                         justifyContent={'start'}
-                        href="tel:+15125172558"
+                        href="tel:+18458530388"
                       >
-                        (512) 517-2558
+                        (845) 853-0388
                       </Button>
                     </VStack>
                   </Box>
